@@ -15,7 +15,7 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	. "github.com/cloudfoundry-community/splunk-firehose-nozzle/eventwriter"
+	. "github.com/StefanPostma/dynatrace-firehose-nozzle/eventwriter"
 )
 
 var _ = Describe("Splunk", func() {

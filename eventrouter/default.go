@@ -1,9 +1,9 @@
 package eventrouter
 
 import (
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/cache"
-	fevents "github.com/cloudfoundry-community/splunk-firehose-nozzle/events"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/eventsink"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/cache"
+	fevents "github.com/StefanPostma/dynatrace-firehose-nozzle/events"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/eventsink"
 	"github.com/cloudfoundry/sonde-go/events"
 )
 

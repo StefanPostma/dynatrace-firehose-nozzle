@@ -1,8 +1,8 @@
 package eventrouter_test
 
 import (
-	. "github.com/cloudfoundry-community/splunk-firehose-nozzle/eventrouter"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/testing"
+	. "github.com/StefanPostma/dynatrace-firehose-nozzle/eventrouter"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/testing"
 	"github.com/cloudfoundry/sonde-go/events"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

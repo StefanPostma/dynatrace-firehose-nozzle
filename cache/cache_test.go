@@ -7,8 +7,8 @@ import (
 
 	"code.cloudfoundry.org/lager"
 
-	. "github.com/cloudfoundry-community/splunk-firehose-nozzle/cache"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/testing"
+	. "github.com/StefanPostma/dynatrace-firehose-nozzle/cache"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/testing"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

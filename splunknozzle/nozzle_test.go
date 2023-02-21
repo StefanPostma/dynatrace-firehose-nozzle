@@ -7,9 +7,9 @@ import (
 	"code.cloudfoundry.org/lager"
 
 	cfclient "github.com/cloudfoundry-community/go-cfclient"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/monitoring"
-	. "github.com/cloudfoundry-community/splunk-firehose-nozzle/splunknozzle"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/testing"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/monitoring"
+	. "github.com/StefanPostma/dynatrace-firehose-nozzle/splunknozzle"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/testing"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

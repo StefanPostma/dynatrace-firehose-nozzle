@@ -1,6 +1,6 @@
 package monitoring
 
-import "github.com/cloudfoundry-community/splunk-firehose-nozzle/utils"
+import "github.com/StefanPostma/dynatrace-firehose-nozzle/utils"
 
 type NoMonitor struct {
 }

@@ -7,18 +7,18 @@ import (
 
 	"code.cloudfoundry.org/lager"
 	cfclient "github.com/cloudfoundry-community/go-cfclient"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/cache"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/eventrouter"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/events"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/eventsink"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/eventsource"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/eventwriter"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/monitoring"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/utils"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/cache"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/eventrouter"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/events"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/eventsink"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/eventsource"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/eventwriter"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/monitoring"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/utils"
 	"github.com/shirou/gopsutil/v3/cpu"
 	"github.com/shirou/gopsutil/v3/mem"
 
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/nozzle"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/nozzle"
 	"github.com/google/uuid"
 )
 

@@ -7,8 +7,8 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/cache"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/utils"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/cache"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/utils"
 	"github.com/cloudfoundry/sonde-go/events"
 	"github.com/sirupsen/logrus"
 )

@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/events"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/events"
 
 	kingpin "gopkg.in/alecthomas/kingpin.v2"
 )

@@ -1,7 +1,7 @@
 package monitoring
 
 import (
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/utils"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/utils"
 )
 
 type MonitorFunc func() interface{}

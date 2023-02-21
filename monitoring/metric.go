@@ -8,8 +8,8 @@ import (
 	"time"
 
 	"code.cloudfoundry.org/lager"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/eventwriter"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/utils"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/eventwriter"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/utils"
 )
 
 const (

@@ -60,10 +60,10 @@ var _ = Describe("Splunk", func() {
 		})
 
 		It("correctly authenticates requests", func() {
-			tokenValue := "abc-some-random-token"
+			tokenValue := "token"
 			config.Token = tokenValue
 
-			client := NewSplunkEvent(config)
+			client := NewDynatraceEvent(config)
 			events := []map[string]interface{}{}
 			err, _ := client.Write(events)
 
@@ -71,13 +71,13 @@ var _ = Describe("Splunk", func() {
 			Expect(capturedRequest).NotTo(BeNil())
 
 			authValue := capturedRequest.Header.Get("Authorization")
-			expectedAuthValue := fmt.Sprintf("Splunk %s", tokenValue)
+			expectedAuthValue := fmt.Sprintf("Api-Token", tokenValue)
 
 			Expect(authValue).To(Equal(expectedAuthValue))
 		})
 
 		It("sets content type to json", func() {
-			client := NewSplunkEvent(config)
+			client := NewDynatraceEvent(config)
 			events := []map[string]interface{}{}
 			err, _ := client.Write(events)
 
@@ -85,13 +85,13 @@ var _ = Describe("Splunk", func() {
 			Expect(capturedRequest).NotTo(BeNil())
 
 			contentType := capturedRequest.Header.Get("Content-Type")
-			Expect(contentType).To(Equal("application/json"))
+			Expect(contentType).To(Equal("application/json;charset=utf-8"))
 		})
 
 		It("sets app name to appName", func() {
 			appName := "Splunk Firehose Nozzle"
 
-			client := NewSplunkEvent(config)
+			client := NewDynatraceEvent(config)
 			events := []map[string]interface{}{}
 			err, _ := client.Write(events)
 
@@ -107,7 +107,7 @@ var _ = Describe("Splunk", func() {
 			appVersion := "1.2.5"
 			config.Version = "1.2.5"
 
-			client := NewSplunkEvent(config)
+			client := NewDynatraceEvent(config)
 			events := []map[string]interface{}{}
 			err, _ := client.Write(events)
 
@@ -120,7 +120,7 @@ var _ = Describe("Splunk", func() {
 		})
 
 		It("Writes batch event json", func() {
-			client := NewSplunkEvent(config)
+			client := NewDynatraceEvent(config)
 			event1 := map[string]interface{}{"event": map[string]interface{}{
 				"greeting": "hello world",
 			}}
@@ -150,7 +150,7 @@ var _ = Describe("Splunk", func() {
 
 		It("sets index in splunk payload", func() {
 			config.Index = "index_cf"
-			client := NewSplunkEvent(config)
+			client := NewDynatraceEvent(config)
 			event1 := map[string]interface{}{"event": map[string]interface{}{
 				"greeting": "hello world",
 			}}
@@ -174,7 +174,7 @@ var _ = Describe("Splunk", func() {
 
 		It("doesn't change index as it's already set", func() {
 			config.Index = "index_cf"
-			client := NewSplunkEvent(config)
+			client := NewDynatraceEvent(config)
 			event1 := map[string]interface{}{"event": map[string]interface{}{
 				"greeting": "hello world",
 			}}
@@ -204,7 +204,7 @@ var _ = Describe("Splunk", func() {
 			}
 			config.Fields = fields
 
-			client := NewSplunkEvent(config)
+			client := NewDynatraceEvent(config)
 			event1 := map[string]interface{}{"event": map[string]interface{}{
 				"greeting": "hello world",
 			}}
@@ -228,17 +228,17 @@ var _ = Describe("Splunk", func() {
 		})
 
 		It("Writes to correct endpoint", func() {
-			client := NewSplunkEvent(config)
+			client := NewDynatraceEvent(config)
 			events := []map[string]interface{}{}
 			err, _ := client.Write(events)
 
 			Expect(err).To(BeNil())
-			Expect(capturedRequest.URL.Path).To(Equal("/services/collector"))
+			Expect(capturedRequest.URL.Path).To(Equal("/api/v2/logs/ingest"))
 		})
 
 		It("Writes to stdout in debug without error", func() {
 			config.Debug = true
-			client := NewSplunkEvent(config)
+			client := NewDynatraceEvent(config)
 			events := []map[string]interface{}{}
 			err, _ := client.Write(events)
 
@@ -248,7 +248,7 @@ var _ = Describe("Splunk", func() {
 
 	It("returns error on bad splunk host", func() {
 		config.Host = ":"
-		client := NewSplunkEvent(config)
+		client := NewDynatraceEvent(config)
 		events := []map[string]interface{}{}
 		err, _ := client.Write(events)
 
@@ -263,7 +263,7 @@ var _ = Describe("Splunk", func() {
 		}))
 
 		config.Host = testServer.URL
-		client := NewSplunkEvent(config)
+		client := NewDynatraceEvent(config)
 		events := []map[string]interface{}{}
 		err, _ := client.Write(events)
 
@@ -273,7 +273,7 @@ var _ = Describe("Splunk", func() {
 
 	It("Returns error from http client", func() {
 		config.Host = "foo://example.com"
-		client := NewSplunkEvent(config)
+		client := NewDynatraceEvent(config)
 		events := []map[string]interface{}{}
 		err, _ := client.Write(events)
 

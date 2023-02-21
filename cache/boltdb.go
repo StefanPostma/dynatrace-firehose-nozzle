@@ -10,8 +10,8 @@ import (
 	"code.cloudfoundry.org/lager"
 
 	cfclient "github.com/cloudfoundry-community/go-cfclient"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/monitoring"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/utils"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/monitoring"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/utils"
 	json "github.com/mailru/easyjson"
 	bolt "go.etcd.io/bbolt"
 )

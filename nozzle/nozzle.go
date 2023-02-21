@@ -4,10 +4,10 @@ import (
 	"time"
 
 	"code.cloudfoundry.org/lager"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/eventrouter"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/eventsource"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/monitoring"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/utils"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/eventrouter"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/eventsource"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/monitoring"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/utils"
 	"github.com/gorilla/websocket"
 )
 

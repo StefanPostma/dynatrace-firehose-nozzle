@@ -1,4 +1,4 @@
-module github.com/cloudfoundry-community/splunk-firehose-nozzle
+module github.com/StefanPostma/dynatrace-firehose-nozzle
 
 go 1.17
 

@@ -5,14 +5,14 @@ import (
 
 	"code.cloudfoundry.org/lager"
 
-	. "github.com/cloudfoundry-community/splunk-firehose-nozzle/nozzle"
+	. "github.com/StefanPostma/dynatrace-firehose-nozzle/nozzle"
 	"github.com/cloudfoundry/sonde-go/events"
 	"github.com/gorilla/websocket"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/testing"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/testing"
 )
 
 var _ = Describe("Nozzle", func() {

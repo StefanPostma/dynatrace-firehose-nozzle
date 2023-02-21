@@ -7,7 +7,7 @@ import (
 	"syscall"
 
 	"code.cloudfoundry.org/lager/lagerflags"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/splunknozzle"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/splunknozzle"
 )
 
 var (
@@ -21,7 +21,7 @@ func main() {
 	lagerflags.AddFlags(flag.CommandLine)
 
 	logger, _ := lagerflags.New("splunk-nozzle-logger")
-	logger.Info("Running splunk-firehose-nozzle")
+	logger.Info("Running dynatrace-firehose-nozzle")
 
 	shutdownChan := make(chan os.Signal, 2)
 	signal.Notify(shutdownChan, syscall.SIGINT, syscall.SIGTERM)
@@ -34,6 +34,6 @@ func main() {
 	splunkNozzle := splunknozzle.NewSplunkFirehoseNozzle(config, logger)
 	err := splunkNozzle.Run(shutdownChan)
 	if err != nil {
-		logger.Error("Failed to run splunk-firehose-nozzle", err)
+		logger.Error("Failed to run dynatrace-firehose-nozzle", err)
 	}
 }

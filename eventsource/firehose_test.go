@@ -4,8 +4,8 @@ import (
 	"errors"
 	"time"
 
-	. "github.com/cloudfoundry-community/splunk-firehose-nozzle/eventsource"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/testing"
+	. "github.com/StefanPostma/dynatrace-firehose-nozzle/eventsource"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/testing"
 	"github.com/cloudfoundry/sonde-go/events"
 
 	. "github.com/onsi/ginkgo"

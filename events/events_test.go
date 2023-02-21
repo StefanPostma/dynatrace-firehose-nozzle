@@ -3,8 +3,8 @@ package events_test
 import (
 	"math"
 
-	fevents "github.com/cloudfoundry-community/splunk-firehose-nozzle/events"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/testing"
+	fevents "github.com/StefanPostma/dynatrace-firehose-nozzle/events"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/testing"
 	. "github.com/cloudfoundry/sonde-go/events"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

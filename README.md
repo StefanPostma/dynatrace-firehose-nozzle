@@ -1,18 +1,15 @@
-## Splunk Nozzle
+## Dynatrace Nozzle
 
-Cloud Foundry Firehose-to-Splunk Nozzle
+// UNDER ACTIVE DEVELOPMENT NOT READY TO WORK!
 
-- - - -
-
-### VMware Tanzu Application Service version
-Splunk Firehose Nozzle has been tested on v3.0.0 of Tanzu Application Service
+Cloud Foundry Firehose-to-Dynatrace Nozzle
 
 - - - -
 
 ### Usage
-Splunk nozzle is used to stream Cloud Foundry Firehose events to Splunk HTTP Event Collector. Using pre-defined Splunk sourcetypes, the nozzle automatically parses the events and enriches them with additional metadata before forwarding to Splunk. For detailed descriptions of each Firehose event type and their fields, refer to underlying [dropsonde protocol](https://github.com/cloudfoundry/dropsonde-protocol). Below is a mapping of each Firehose event type to its corresponding Splunk sourcetype. Refer to [Searching Events](#searching-events) for example Splunk searches.
+Dynatrace nozzle is used to stream Cloud Foundry Firehose events to the Dynatrace V2 log ingest endpoint. The nozzle automatically parses the events and enriches them with additional metadata before forwarding. For detailed descriptions of each Firehose event type and their fields, refer to underlying [dropsonde protocol](https://github.com/cloudfoundry/dropsonde-protocol). Below is a mapping of each Firehose event type to its corresponding Eventtype.
 
-| Firehose event type | Splunk sourcetype | Description
+| Firehose event type | Dynatrace eventtype | Description
 |---|---|---
 | Error | `cf:error` | An Error event represents an error in the originating process
 | HttpStartStop | `cf:httpstartstop` | An HttpStartStop event represents the whole lifecycle of an HTTP request

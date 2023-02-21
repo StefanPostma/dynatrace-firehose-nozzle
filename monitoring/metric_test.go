@@ -5,9 +5,9 @@ import (
 	"time"
 
 	"code.cloudfoundry.org/lager"
-	. "github.com/cloudfoundry-community/splunk-firehose-nozzle/monitoring"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/testing"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/utils"
+	. "github.com/StefanPostma/dynatrace-firehose-nozzle/monitoring"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/testing"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/utils"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 )

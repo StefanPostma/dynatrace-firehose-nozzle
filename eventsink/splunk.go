@@ -11,11 +11,11 @@ import (
 	"sync/atomic"
 
 	"code.cloudfoundry.org/lager"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/cache"
-	fevents "github.com/cloudfoundry-community/splunk-firehose-nozzle/events"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/eventwriter"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/monitoring"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/utils"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/cache"
+	fevents "github.com/StefanPostma/dynatrace-firehose-nozzle/events"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/eventwriter"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/monitoring"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/utils"
 	"github.com/cloudfoundry/sonde-go/events"
 )
 

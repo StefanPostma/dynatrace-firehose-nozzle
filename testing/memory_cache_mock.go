@@ -1,7 +1,7 @@
 package testing
 
 import (
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/cache"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/cache"
 )
 
 type MemoryCacheMock struct {

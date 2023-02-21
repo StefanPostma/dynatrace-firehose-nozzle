@@ -9,14 +9,14 @@ import (
 	. "github.com/onsi/gomega"
 
 	"code.cloudfoundry.org/lager"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/cache"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/eventrouter"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/utils"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/cache"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/eventrouter"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/utils"
 	"github.com/cloudfoundry/sonde-go/events"
 
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/eventsink"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/eventwriter"
-	"github.com/cloudfoundry-community/splunk-firehose-nozzle/testing"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/eventsink"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/eventwriter"
+	"github.com/StefanPostma/dynatrace-firehose-nozzle/testing"
 )
 
 var _ = Describe("Splunk", func() {
