@@ -98,7 +98,7 @@ func (s *SplunkEvent) send(postBody *[]byte) error {
 	}
 	req.Header.Set("Content-Type", "application/json;charset=utf-8")
 	//req.Header.Set("Connection", "keep-alive")
-	req.Header.Set("Authorization", fmt.Sprintf("Api-Token ", s.config.Token))
+	req.Header.Set("Authorization", fmt.Sprintf("Api-Token %s", s.config.Token))
 	
 	//Add app headers for HEC telemetry
 	//req.Header.Set("log.source", "Dynatrace Firehose Nozzle")

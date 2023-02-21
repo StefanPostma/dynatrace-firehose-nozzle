@@ -8,7 +8,7 @@ export API_USER=admin
 export API_PASSWORD=admin
 
 # possible values: ValueMetric,CounterEvent,Error,LogMessage,HttpStartStop,ContainerMetric
-export EVENTS=ValueMetric,CounterEvent
+export EVENTS=ValueMetric,CounterEvent,Error,LogMessage
 
 export SPLUNK_TOKEN=<token>
 export SPLUNK_HOST=<hec host, something like https://example.cloud.splunk.com:8088>
